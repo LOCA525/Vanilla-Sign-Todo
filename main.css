@@ -47,6 +47,11 @@ body {
   color: #000;
 }
 
+.container .titleBox .mainImage {
+  padding-top: 26px;
+  height: 163px;
+}
+
 .container .titleBox p {
   font-weight: 400;
   font-size: 24px;
@@ -59,6 +64,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.container .loginForm.login {
+  padding-top: 52px;
+}
 
 .container .loginForm input {
   width: 100%;
@@ -70,6 +78,14 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 15px;
+}
+.container .loginForm.login p {
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #2ed2c9;
+  padding-top: 16px;
 }
 
 .container .loginForm input:last-of-type {
@@ -85,6 +101,10 @@ body {
   line-height: 35px;
   background-color: #2ed2c9;
   color: #ffff;
+}
+
+.container .loginForm.login .submit.login {
+  margin-top: 16px;
 }
 
 .container .qa {
