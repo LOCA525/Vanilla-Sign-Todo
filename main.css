@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ol,
+ul {
+  list-style: none;
+}
+input {
+  border: none;
+  outline: none;
+}
+button {
+  border: none;
+  background: transparent;
+}
+
+body {
+  font-family: "Noto Sans SC", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 414px;
+  width: 100%;
+  background-color: #eaf2f2;
+  position: relative;
+  padding: 0 20px;
+}
+
+.container .backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container .titleBox {
+  padding-top: 130px;
+  text-align: center;
+}
+
+.container .titleBox h2 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #000;
+}
+
+.container .titleBox p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #756c6c91;
+}
+
+.container .loginForm {
+  padding-top: 67px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .loginForm input {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 15px;
+}
+
+.container .loginForm input:last-of-type {
+  margin-bottom: 0;
+}
+
+.container .loginForm .submit {
+  margin-top: 50px;
+  width: 100%;
+  height: 60px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  background-color: #2ed2c9;
+  color: #ffff;
+}
+
+.container .qa {
+  padding-top: 16px;
+  padding-bottom: 34px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.container .qa a {
+  font-size: 22px;
+  color: #2ed2c9;
+}
