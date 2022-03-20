@@ -54,6 +54,7 @@ function join() {
           if (i === users.length - 1) {
             users.push(userValue);
             localStorage.setItem("users", JSON.stringify(users));
+            alert("회원가입에 성공하였습니다!");
             return;
           }
         }
