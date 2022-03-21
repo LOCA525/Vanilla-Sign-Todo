@@ -64,8 +64,68 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.container .loginForm.todo {
+  padding-top: 20px;
+}
+
+.container .loginForm.todo .submit.login {
+  margin-top: 20px;
+}
 .container .loginForm.login {
   padding-top: 52px;
+}
+.container .todos {
+  margin-top: 67px;
+  width: 100%;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.container .todos .todoBox {
+  width: 100%;
+  padding: 20px 20px 5px 20px;
+  margin-bottom: 20px;
+
+  border: 2px solid #52b6c4;
+  border-radius: 20px;
+  position: relative;
+}
+.container .todos .todoBox .xBtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+.container .todos .todoBox p {
+  color: #000;
+  font-weight: 700;
+  font-size: 20px;
+  word-break: break-all;
+}
+.container .todos .todoBox .userDate {
+  align-items: center;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .todos .todoBox .date {
+  line-height: 20px;
+  height: 20px;
+  border-radius: 5px;
+
+  font-size: 12px;
+}
+.container .todos .todoBox .user {
+  font-weight: 700;
+  font-size: 13px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #2ed2c9;
+  padding: 5px;
+
+  color: #fff;
 }
 
 .container .loginForm input {

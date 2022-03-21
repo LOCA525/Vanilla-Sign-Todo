@@ -5,6 +5,9 @@ function login() {
   const loginForm = document.querySelector(".loginForm.login");
 
   let users = JSON.parse(localStorage.getItem("users"));
+  const goTodo = () => {
+    location.href = "/page/todo.html";
+  };
 
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -24,6 +27,16 @@ function login() {
     for (let i = 0; i < users.length; i++) {
       if (email.value === users[i].email && password.value === users[i].password) {
         alert("로그인 성공!");
+
+        const user = {
+          email: users[i].email,
+          name: users[i].name,
+        };
+
+        localStorage.setItem("user", JSON.stringify(user));
+
+        goTodo();
+
         return;
       } else {
         if (i === users.length - 1) {

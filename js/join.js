@@ -55,10 +55,15 @@ function join() {
             users.push(userValue);
             localStorage.setItem("users", JSON.stringify(users));
             alert("회원가입에 성공하였습니다!");
+            goLogin();
             return;
           }
         }
       }
     }
+  };
+
+  const goLogin = () => {
+    location.href = "/page/login.html";
   };
 }
