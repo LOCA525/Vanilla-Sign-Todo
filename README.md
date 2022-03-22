@@ -4,6 +4,7 @@
 
 - 회원가입 인풋에 입력된 name, email, password 밸류 값을  키(users)로 로컬스토리지에 저장시킴
 
+
 - 페이지 실행시 로컬스토리지안의 users키값을 불러온 후 로컬스토리지에 저장된 유저데이터가 비어있다면 빈배열을 추가시킴
 
 ```jsx
@@ -12,6 +13,7 @@ let users = JSON.parse(localStorage.getItem("users"));
     localStorage.setItem("users", JSON.stringify([]));
   }
 ```
+
 
 - 기존 로컬스토리지에 저장되어있는 유저 아이디와 비밀번호가 중복되는지 체크하고 중복되지 않다면 로컬스토리지에 저장하는 userDuplicationCheck함수 선언
 
@@ -38,6 +40,7 @@ const userDuplicationCheck = (userValue) => {
     };
 ```
 
+
 - 회원가입 성공 alert출력 후  로그인페이지로 이동
 
 ```jsx
@@ -61,6 +64,7 @@ const goLogin = () => {
           }
     ```
     
+
 
 - email과 password value값과 로컬스토리지안에 저장된 users키값을 for문을 통해 확인후 users키값에 저장된 value값이 맞을시 “로그인 성공” 출력. 아닐 시, “로그인 실패” 출력
 
@@ -88,7 +92,9 @@ for (let i = 0; i < users.length; i++) {
     }
 ```
 
+
 - 현재 로그인성공이 출력될 수 있게 한 users키값을 user란 변수를 지정해 로컬스토리지에 키값user로 저장
+
 
 - for문이 로컬스토리지에 저장된 users키값을 끝까지 돌수 있게 else문에 if문을 걸어줌(users.length -1 = users안의 배열의 마지막 인덱스값)
     
@@ -103,6 +109,7 @@ for (let i = 0; i < users.length; i++) {
 
 ## 3. TODOLIST
 
+
 - 로컬스토리지 user키값이 없을시 로그인을 위해 로그인페이지로 이동
 
 ```jsx
@@ -110,6 +117,7 @@ if (!JSON.parse(localStorage.getItem("user"))) {
     location.href = "/page/login.html";
   }
 ```
+
 
 - map을 이용해 todos 클래스에 새로운 li태그를 넣는 함수 선언
 
@@ -134,6 +142,7 @@ const render = () => {
   };
 ```
 
+
 - todo에 (input value 값, 현재 년월일시, 유저id) 를 push하고 로컬스토리지에 “todo” 키값으로 저장함
 
 ```jsx
@@ -144,6 +153,7 @@ todo.push({
     });
     localStorage.setItem("todo", JSON.stringify(todo));
 ```
+
 
 - render함수 실행하여 li클래스를 넣어 화면에 출력후 기존input value 공란으로 만듬
 
@@ -165,7 +175,9 @@ document.addEventListener("click", (e) => {
   });
 ```
 
+
 - 클릭 addeventListener를 이용해 현재 클릭된 타겟의 클래스가 xBtn을 포함하고 있다면, filter함수를 이용한다.
+
 
 - id를 이용한 필터링을 위해 todo키값에 id를 임의로 부여한다.
 
@@ -174,5 +186,6 @@ const now = new Date();
     const idNow = `${now.getFullYear()}${now.getMonth()}${now.getDate()}${now.getHours()}${now.getSeconds()}`;
     const id = Math.floor(Number(idNow) + Math.random() * Number(idNow));
 ```
+
 
 - 지금 클릭된 xBtn클래스가 저장된 로컬스토리지안의 id 값 과 todo키값에 부여된 id 값을 서로 비교하여 같은것을 제외한 나머지 값들만 다시 로컬스토리지에 저장하고 화면에 출력한다.
