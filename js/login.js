@@ -5,6 +5,7 @@ function login() {
   const loginForm = document.querySelector(".loginForm.login");
 
   let users = JSON.parse(localStorage.getItem("users"));
+
   const goTodo = () => {
     location.href = "/page/todo.html";
   };
@@ -17,6 +18,9 @@ function login() {
     } else if (password.value === "") {
       alert("비밀번호를 입력해주세요.");
     } else {
+      if (users.length === 0) {
+        location.href = "/page/join.html";
+      }
       accountCheck(users);
       email.value = "";
       password.value = "";
