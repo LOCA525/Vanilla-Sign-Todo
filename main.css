@@ -92,8 +92,21 @@ body {
 }
 .container .todos .todoBox .xBtn {
   position: absolute;
-  top: 10px;
+  top: 5px;
   right: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #2ed2c9;
+  padding: 5px;
+}
+.container .todos .todoBox .editBtn {
+  padding: 5px;
+  color: #fff;
+  background-color: #2ed2c9;
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  border-radius: 10px;
   cursor: pointer;
 }
 .container .todos .todoBox p {

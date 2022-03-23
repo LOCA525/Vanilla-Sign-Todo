@@ -5,6 +5,7 @@ const year = date.getFullYear();
 const month = date.getMonth() + 1;
 const day = date.getDate();
 const hours = date.getHours();
+const minutes = date.getMinutes();
 
 function todo() {
   if (!JSON.parse(localStorage.getItem("user"))) {
@@ -53,7 +54,7 @@ function todo() {
     if (editId === null) {
       todo.push({
         content: todoInput.value,
-        date: `${year}/${month}/${day} ${hours}시`,
+        date: `${year}/${month}/${day} ${hours}시 ${minutes}분`,
         id: id,
       });
       localStorage.setItem("todo", JSON.stringify(todo));
